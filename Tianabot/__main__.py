@@ -79,7 +79,7 @@ PM_START_TEXT = """Hello, My name is ༒ 𝙏𝙄𝘼𝙉𝘼 ༒
 Hey , I am a Group Manager,
 Made specially for Managing Groups.
 
-This Pro bot was made by [ℙℝ𝕀ℕℂ𝔼](https://t.me/prince_3011)
+This Pro bot was made by [ℙℝ𝕀ℕℂ𝔼](@prince_3011)
 Click /help or use button below to find out more about how to use me to my full potential."""
 
 buttons = [
@@ -107,19 +107,20 @@ buttons = [
     
 ]
 
+TIANA_IMG = "https://telegra.ph/file/5033de333ba8a70a216ad.mp4"
+
 HELP_STRINGS = """
 Hey There! My Name is 𝙏𝙄𝘼𝙉𝘼.
 
 I'm a Heroine For Fun and help admins to manage their groups! Have a look at the following for an idea of some of the things I can help you with.
-Main commands available:
+
+• Main commands available:
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
  • /donate: information on how to donate!
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-
-Any Queries Or Suggestions For This Bot Join [SUPPORT GROUP](https://t.me/princebotsupport)
 
 All commands can either be used with / or !.
 
@@ -236,8 +237,8 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+          update.effective_message.reply_video(
+                TIANA_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
