@@ -62,7 +62,7 @@ async def lego(event):
     pointsize = 500
     fillcolor = "white"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Tianabot/resources/Meghrib.otf", 1000)
+    font = ImageFont.truetype("./Tianabot/resources/Maghrib.ttf", 1000)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
