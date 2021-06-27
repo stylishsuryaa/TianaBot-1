@@ -1,4 +1,4 @@
-from Tianabot.event import register
+from Tianabot.events import register
 from Tianabot import OWNER_ID
 from Tianabot import telethn as tbot
 import os 
