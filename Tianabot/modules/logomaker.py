@@ -4,6 +4,41 @@ from Tianabot import telethn as tbot
 import os 
 from PIL import Image, ImageDraw, ImageFont
 
+@register(pattern="^/logo ?(.*)")
+async def lego(event):
+ quew = event.pattern_match.group(1)
+ if event.sender_id == OWNER_ID:
+     pass
+ else:
+ 
+  if not quew:
+     await event.reply('Darling Listen! Provide Some Text To Draw!')
+     return
+ await event.reply('Tiana! Creating your logo...wait!')
+ try:
+    text = event.pattern_match.group(1)
+    img = Image.open('./Tianabot/resources/logo/logo.jpg')
+    draw = ImageDraw.Draw(img)
+    image_widthz, image_heightz = img.size
+    pointsize = 500
+    fillcolor = "white"
+    shadowcolor = "blue"
+    font = ImageFont.truetype("./Tianabot/resources/font/Maghrib.ttf", 1000)
+    w, h = draw.textsize(text, font=font)
+    h += int(h*0.21)
+    image_width, image_height = img.size
+    draw.text(((image_widthz-w)/2, (image_heightz-h)/2), text, font=font, fill=(255, 255, 255))
+    x = (image_widthz-w)/2
+    y= ((image_heightz-h)/2+6)
+    draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
+    fname2 = "LogobyTiana.png"
+    img.save(fname2, "png")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By Tianabot")
+    if os.path.exists(fname2):
+            os.remove(fname2)
+ except Exception as e:
+   await event.reply(f'Error Report @PrinceBotSupport, {e}')
+
 
 @register(pattern="^/logo1 ?(.*)")
 async def lego(event):
@@ -18,13 +53,13 @@ async def lego(event):
  await event.reply('Tiana! Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Tianabot/resources/blackbg.jpg')
+    img = Image.open('./Tianabot/resources/logo/logo1.jpeg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "gold"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Tianabot/resources/Chopsic.otf", 330)
+    font = ImageFont.truetype("./Tianabot/resources/font/Chopsic.otf", 330)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -34,45 +69,7 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
     fname2 = "LogobyTiana.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By Cutiepii_Robot")
-    if os.path.exists(fname2):
-            os.remove(fname2)
- except Exception as e:
-   await event.reply(f'Error Report @PrinceBotSupport, {e}')
-
-
-
-   
-@register(pattern="^/logo ?(.*)")
-async def lego(event):
- quew = event.pattern_match.group(1)
- if event.sender_id == OWNER_ID:
-     pass
- else:
- 
-  if not quew:
-     await event.reply('Darling Listen! Provide Some Text To Draw!')
-     return
- await event.reply('Tiana! Creating your logo...wait!')
- try:
-    text = event.pattern_match.group(1)
-    img = Image.open('./Tianabot/resources/blackbg.jpg')
-    draw = ImageDraw.Draw(img)
-    image_widthz, image_heightz = img.size
-    pointsize = 500
-    fillcolor = "white"
-    shadowcolor = "blue"
-    font = ImageFont.truetype("./Tianabot/resources/Maghrib.ttf", 1000)
-    w, h = draw.textsize(text, font=font)
-    h += int(h*0.21)
-    image_width, image_height = img.size
-    draw.text(((image_widthz-w)/2, (image_heightz-h)/2), text, font=font, fill=(255, 255, 255))
-    x = (image_widthz-w)/2
-    y= ((image_heightz-h)/2+6)
-    draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
-    fname2 = "LogobyTiana.png"
-    img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By Cutiepii_Robot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By Tianabot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
@@ -86,4 +83,4 @@ __help__ = """
  • `/logo text`*:*  Create your logo with your name
  • `/logo1`*:*  Create your logo with your name
  """
-__mod_name__ = "Logo"
+__mod_name__ = "LOGO"
