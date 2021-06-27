@@ -53,7 +53,7 @@ async def lego(event):
  await event.reply('Tiana! Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Tianabot/resources/logo/logo1.jpeg')
+    img = Image.open('./Tianabot/resources/logo/logo1.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
