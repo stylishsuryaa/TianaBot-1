@@ -19,7 +19,7 @@ import sys
 import yaml
 from envparse import env
 
-from DaisyX.utils.logger import log
+from Tianabot.utils.logger import log
 
 DEFAULTS = {
     'LOAD_MODULES': True,
