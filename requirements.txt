@@ -65,3 +65,4 @@ aiofiles
 pyromod
 TgCrypto
 PyYAML>5.0
+fontTools
