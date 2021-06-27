@@ -40,7 +40,7 @@ async def lego(event):
    await event.reply(f'Error Report @PrinceBotSupport, {e}')
 
 
-@register(pattern="^/logo1 ?(.*)")
+@register(pattern="^/alogo ?(.*)")
 async def lego(event):
  quew = event.pattern_match.group(1)
  if event.sender_id == OWNER_ID:
