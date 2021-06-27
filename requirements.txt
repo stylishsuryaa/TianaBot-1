@@ -64,4 +64,3 @@ redis
 aiofiles
 pyromod
 TgCrypto
-yaml
