@@ -67,3 +67,4 @@ TgCrypto
 PyYAML>5.0
 fontTools
 faker
+youtubesearchpython
