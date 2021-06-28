@@ -71,3 +71,4 @@ youtube_search_python
 envparse
 loguru
 googletrans==4.0.0-rc1
+pykeyboard 
