@@ -88,6 +88,34 @@ bubblefont = [
     "ⓨ",
     "ⓩ",
 ]
+bifont = [
+    "𝘼",
+    "𝘽",
+    "𝘾",
+    "𝘿",
+    "𝙀",
+    "𝙁",
+    "𝙂",
+    "𝙃",
+    "𝙄",
+    "𝙅",
+    "𝙆",
+    "𝙇",
+    "𝙈",
+    "𝙉",
+    "𝙊",
+    "𝙋",
+    "𝙌",
+    "𝙍",
+    "𝙎",
+    "𝙏",
+    "𝙐",
+    "𝙑",
+    "𝙒",
+    "𝙓",
+    "𝙔",
+    "𝙕",
+]
 fbubblefont = [
     "🅐",
     "🅑",
@@ -424,6 +452,34 @@ def blue(update, context):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
+        
+@run_async
+@typing_action
+def bi(update, context):
+    args = context.args
+    message = update.effective_message
+    string = ""
+
+    if message.reply_to_message:
+        string = message.reply_to_message.text.lower().replace(" ", "  ")
+
+    if args:
+        string = "  ".join(args).lower()
+
+    if not string:
+        message.reply_text("Usage is `/bi <text>`", parse_mode=ParseMode.MARKDOWN)
+        return
+
+    for normiecharacter in string:
+        if normiecharacter in normiefont:
+            bicharacter = bifont[normiefont.index(normiecharacter)]
+            string = string.replace(normiecharacter, bicharacter)
+
+    if message.reply_to_message:
+        message.reply_to_message.reply_text(string)
+    else:
+        message.reply_text(string)
+        
 
 
 @run_async
@@ -480,6 +536,7 @@ def lined(update, context):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
+        
 __help__ = """
  - /weebify <text>: weebify your text!
  - /bubble <text>: bubble your text!
@@ -489,6 +546,7 @@ __help__ = """
  - /blue <text>: bluify your text!
  - /latin <text>: latinify your text!
  - /lined <text>: lined your text!
+ - /bi <text>: Bold + Italic text!
 """
 __mod_name__ = "STYLETEXT"
 
@@ -500,6 +558,7 @@ FSQUARE_HANDLER = DisableAbleCommandHandler("fsquare", fsquare)
 BLUE_HANDLER = DisableAbleCommandHandler("blue", blue)
 LATIN_HANDLER = DisableAbleCommandHandler("latin", latin)
 LINED_HANDLER = DisableAbleCommandHandler("lined", lined)
+BI_HANDLER = DisableAbleCommandHandler("bi", bi)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(BUBBLE_HANDLER)
@@ -509,6 +568,7 @@ dispatcher.add_handler(FSQUARE_HANDLER)
 dispatcher.add_handler(BLUE_HANDLER)
 dispatcher.add_handler(LATIN_HANDLER)
 dispatcher.add_handler(LINED_HANDLER)
+dispatcher.add_handler(BI_HANDLER)
 
 __command_list__ = ["weebify"]
 __command_list__ = ["bubble"]
@@ -518,6 +578,7 @@ __command_list__ = ["fsquare"]
 __command_list__ = ["blue"]
 __command_list__ = ["latin"]
 __command_list__ = ["lined"]
+__command_list__ = ["bi"]
 __handlers__ = [WEEBIFY_HANDLER]
 __handlers__ = [BUBBLE_HANDLER]
 __handlers__ = [FBUBBLE_HANDLER]
@@ -526,3 +587,4 @@ __handlers__ = [FSQUARE_HANDLER]
 __handlers__ = [BLUE_HANDLER]
 __handlers__ = [LATIN_HANDLER]
 __handlers__ = [LINED_HANDLER]
+__handlers__ = [BI_HANDLER]
