@@ -1,4 +1,4 @@
-from tempmail import TempMail
+from Tianabot.modules.tempmail import TempMail
 import time, markdown, base64, os
 from datetime import datetime
 from Tianabot import *
