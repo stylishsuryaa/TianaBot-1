@@ -73,3 +73,4 @@ loguru
 googletrans==4.0.0-rc1
 pykeyboard 
 Python_ARQ 
+markdown==3.3.3
