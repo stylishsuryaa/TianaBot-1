@@ -78,7 +78,7 @@ if ENV:
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
-    BOT_USERNAME = int(os.environ.get("BOT_USERNAME", None))
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
