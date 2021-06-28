@@ -97,7 +97,7 @@ if ENV:
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-
+    CMD_HELP = {}
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
