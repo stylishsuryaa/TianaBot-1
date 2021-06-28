@@ -9,7 +9,7 @@ from telethon.tl.types import *
 
 from Tianabot import *
 
-from Tianabot.events import register, juliabot
+from Tianabot.events import register, bot
 
 from pymongo import MongoClient
 from Tianabot import MONGO_DB_URI
