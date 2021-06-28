@@ -68,3 +68,4 @@ PyYAML>5.0
 fontTools
 faker
 youtube_search_python
+envparse
