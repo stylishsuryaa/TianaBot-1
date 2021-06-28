@@ -64,7 +64,7 @@ class AioHttp:
                 return await resp.read()
 
 
-__mod_name__ = "Inline"
+__mod_name__ = "INLINE"
 __help__ = """
  ** INLINE BOT SERVICE OF ** @TIANA\_PRINCE\_BOT
  
