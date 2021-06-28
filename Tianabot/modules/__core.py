@@ -8,9 +8,8 @@ import time
 from datetime import datetime
 from Tianabot import OWNER_ID
 from Tianabot import TEMP_DOWNLOAD_DIRECTORY as path
-from Tianabot import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
-water = './Tianabot/resources/IMG_20210215_151841_124.jpg'
+water = './Tianabot/resources/logo.jpg'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
