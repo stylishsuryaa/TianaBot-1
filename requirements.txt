@@ -69,3 +69,4 @@ fontTools
 faker
 youtube_search_python
 envparse
+loguru
