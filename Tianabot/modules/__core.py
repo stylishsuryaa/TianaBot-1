@@ -3,7 +3,6 @@ from Tianabot import telethn as tbot
 from Tianabot.events import register
 import os
 import asyncio
-import os
 import time
 from datetime import datetime
 from Tianabot import OWNER_ID
