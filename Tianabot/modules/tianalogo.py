@@ -1,6 +1,6 @@
 from Tianabot.events import register
 from Tianabot import OWNER_ID
-from Tianabot import tbot
+from Tianabot import telethn as tbot
 import os 
 from PIL import Image, ImageDraw, ImageFont
 
