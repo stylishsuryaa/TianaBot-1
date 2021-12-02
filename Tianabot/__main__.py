@@ -74,18 +74,18 @@ def get_readable_time(seconds: int) -> str:
 
 
 
-PM_START_TEXT = """Hello, My name is ༒ 𝙏𝙄𝘼𝙉𝘼 ༒
+PM_START_TEXT = """Hello, My name is Zayn
 
 Hey , I am a Group Manager,
 Made specially for Managing Groups.
 
-This Pro bot was made by [ℙℝ𝕀ℕℂ𝔼](@prince_3011)
+This Pro bot was made by [SK](@Suryaakumar)
 Click /help or use button below to find out more about how to use me to my full potential."""
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ 𝐀𝐃𝐃 ༒ 𝙏𝙄𝘼𝙉𝘼 ༒ 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕️", url="t.me/Tiana_Prince_bot?startgroup=true"),
+            text="➕️ 𝐀𝐃𝐃 Zayn 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕️", url="t.me/Zaynmalik_gc_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="📱𝐈𝐍𝐅𝐎", callback_data="masha_"),
@@ -97,7 +97,7 @@ buttons = [
    ],
    [
         InlineKeyboardButton(
-            text="✨ 𝐌𝐘 𝐁𝐅 ✨", url="http://t.me/joey_prince_bot"),
+            text="Creator", url="http://t.me/Suryaakumar"),
         InlineKeyboardButton(
             text="⚜️ 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ⚜️", url="https://t.me/PRINCEBOTS"),
     ],
@@ -107,10 +107,10 @@ buttons = [
     
 ]
 
-TIANA_IMG = "https://telegra.ph/file/5033de333ba8a70a216ad.mp4"
+TIANA_IMG = "https://telegra.ph/file/9c24313233ae3353c000b.jpg"
 
 HELP_STRINGS = """
-Hey There! My Name is 𝙏𝙄𝘼𝙉𝘼.
+Hey There! My Name Zayn.
 
 I'm a Heroine For Fun and help admins to manage their groups! Have a look at the following for an idea of some of the things I can help you with.
 
